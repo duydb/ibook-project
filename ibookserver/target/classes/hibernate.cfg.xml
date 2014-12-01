@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibernate.connection.url">jdbc:mysql://128.199.208.250:3306/admin_book</property>
+		<property name="hibernate.connection.username">admin_dao</property>
+
+		<mapping class="com.webdev.dao.POJO.Book" />
+		<mapping class="com.webdev.dao.POJO.BookCat" />
+		<mapping class="com.webdev.dao.POJO.Category" />
+		<mapping class="com.webdev.dao.POJO.Comment" />
+		<mapping class="com.webdev.dao.POJO.CoverFormat" />
+		<mapping class="com.webdev.dao.POJO.Menu" />
+		<mapping class="com.webdev.dao.POJO.Options" />
+		<mapping class="com.webdev.dao.POJO.Order" />
+		<mapping class="com.webdev.dao.POJO.OrderDetail" />
+		<mapping class="com.webdev.dao.POJO.Rate" />
+		<mapping class="com.webdev.dao.POJO.Role" />
+		<mapping class="com.webdev.dao.POJO.Token" />
+		<mapping class="com.webdev.dao.POJO.User" />
+		<mapping class="com.webdev.dao.POJO.UserRole" />
+	</session-factory>
+</hibernate-configuration>
