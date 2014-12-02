@@ -1,0 +1,197 @@
+package com.webdev.server.helpers;
+
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.webdev.server.POJO.Book;
+import com.webdev.server.POJO.BookCat;
+import com.webdev.server.POJO.Comment;
+import com.webdev.server.POJO.CoverFormat;
+import com.webdev.server.POJO.Menu;
+import com.webdev.server.POJO.Options;
+import com.webdev.server.POJO.OrderDetail;
+import com.webdev.server.POJO.Orders;
+import com.webdev.server.POJO.Rate;
+import com.webdev.server.POJO.Role;
+import com.webdev.server.POJO.Token;
+import com.webdev.server.POJO.User;
+import com.webdev.server.POJO.UserRole;
+
+public class JsonHelper {
+	private static JsonHelper instance;
+
+	private JsonHelper() {
+	}
+
+	public static JsonHelper getInstance() {
+		if (instance == null) {
+			instance = new JsonHelper();
+		}
+
+		return instance;
+	}
+
+	public JSONObject parse(Book book) {
+		JSONObject obj = new JSONObject();
+
+		if (book != null) {
+
+			obj.put("book_id", book.getBookId());
+			obj.put("corver_format", book.getCoverFormat());
+			obj.put("pages_num", book.getPagesNum());
+			obj.put("prive", book.getPrice());
+			obj.put("price_sale", book.getPriceSale());
+			obj.put("book_code", book.getBookCode());
+			obj.put("date_modify", book.getDateModify());
+			obj.put("description", book.getDescription());
+			obj.put("image_cover", book.getImageCover());
+			obj.put("public_date", book.getPublicDate());
+			obj.put("title", book.getTitle());
+			obj.put("weight", book.getWeight());
+		}
+		return obj.toString();
+	}
+
+	public String parse(BookCat bcat) {
+		JSONObject obj = new JSONObject();
+		if (bcat != null) {
+			obj.put("book_id", bcat.getBookId());
+			obj.put("cate_id", bcat.getCatId());
+			obj.put("id", bcat.getId());
+		}
+		return obj.toString();
+	}
+
+	public String parse(Comment comm) {
+		JSONObject obj = new JSONObject();
+		obj.put("book_id", comm.getBook().getBookId());
+		obj.put("id", comm.getCommentId());
+		obj.put("status", comm.getStatus());
+		obj.put("user_id", comm.getUser().getUserId());
+		obj.put("date_comment", comm.getDateComment());
+		obj.put("date_modify", comm.getDateModify());
+		obj.put("value", comm.getValue());
+		return obj.toString();
+	}
+
+	public String parse(CoverFormat cover) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("cover_id", cover.getId());
+		obj.put("name", cover.getName());
+
+		return obj.toString();
+	}
+
+	public String parse(Menu menu) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("menu_id", menu.getMenuId());
+		obj.put("parent_id", menu.getMenu().getMenuId());
+		obj.put("menu_text", menu.getMenuText());
+		obj.put("menu_url", menu.getMenuUrl());
+
+		return obj.toString();
+	}
+
+	public String parse(Options opt) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("option_id", opt.getOptionId());
+		obj.put("name", opt.getName());
+		obj.put("value", opt.getValue());
+
+		return obj.toString();
+	}
+
+	public String parse(Orders order) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("order_id", order.getOrderId());
+		obj.put("order_method", order.getOrderMethod());
+		obj.put("total_price", order.getTotalPrice());
+		obj.put("user_id", order.getUser().getUserId());
+		obj.put("order_date", order.getOrderDate());
+
+		return obj.toString();
+	}
+
+	public String parse(OrderDetail oDetails) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("book_id", oDetails.getBook().getBookId());
+		obj.put("order_detail_id", oDetails.getOrderDetailId());
+		obj.put("order_id", oDetails.getOrders().getOrderId());
+		obj.put("price", oDetails.getPrice());
+		obj.put("quantity", oDetails.getQuantity());
+
+		return obj.toString();
+	}
+
+	public String parse(Rate rate) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("book_id", rate.getBook().getBookId());
+		obj.put("rate_id", rate.getRateId());
+		obj.put("star", rate.getStar());
+		obj.put("user_id", rate.getUser().getUserId());
+
+		return obj.toString();
+	}
+
+	public String parse(Role role) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("role_id", role.getRoleId());
+		obj.put("name", role.getName());
+
+		return obj.toString();
+	}
+
+	public String parse(Token token) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("token_id", token.getTokenId());
+		obj.put("user_id", token.getUser().getUserId());
+		obj.put("timeout", token.getTimeout());
+		obj.put("token_value", token.getTokenValue());
+
+		return obj.toString();
+	}
+
+	public String parse(User user) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("user_id", user.getUserId());
+		obj.put("birthday", user.getBirthday());
+		obj.put("register", user.getDateRegister());
+		obj.put("email", user.getEmail());
+		obj.put("fullname", user.getFullname());
+		obj.put("password", user.getPassword());
+		obj.put("username", user.getUsername());
+
+		return obj.toString();
+	}
+
+	public String parse(UserRole uRole) {
+		JSONObject obj = new JSONObject();
+
+		obj.put("role_id", uRole.getRole().getRoleId());
+		obj.put("ur_id", uRole.getUrId());
+		obj.put("user_id", uRole.getUser().getUserId());
+
+		return obj.toString();
+	}
+
+	public String parse(List<Book> lstBook) {
+		JSONArray arr = new JSONArray();
+		
+		for (Book b: lstBook){
+			arr.put(value)
+		}
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

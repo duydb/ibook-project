@@ -1,0 +1,106 @@
+package com.webdev.server.dao;
+
+import java.util.Date;
+import java.util.List;
+
+import org.hibernate.Query;
+
+import com.webdev.server.POJO.Book;
+import com.webdev.server.util.iBookHibernateUtil;
+
+public class BookImpl implements BookDAO {
+	public Book get(int id) {
+		Book result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book where bookId = :id");
+		query.setParameter("id", id);
+
+		result = (Book) query.list().get(0);
+		return result;
+	}
+
+	public Book get(String code) {
+		Book result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book where bookCode = :code");
+		query.setParameter("id", code);
+
+		result = (Book) query.list().get(0);
+		return result;
+	}
+
+	public List<Book> getByCategory(int cateId, int from, int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book as b, BookCat as bc where b.bookId = bc.bookId and bc.catId = :cateId");
+		query.setParameter("cateId", cateId);
+
+		result = query.list().subList(from, from + size);
+		return result;
+	}
+
+	public List<Book> getByCategory(String tag, int from, int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book as b, Category as c, BookCat as bc where b.bookId = bc.bookId and bc.catId = c.cateId and c.tag = :tag");
+		query.setParameter("tag", tag);
+
+		result = query.list().subList(from, from + size);
+		return result;
+	}
+
+	public List<Book> getByDate(Date begin, Date end, int from, int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book where publicDate >= :begin and publicDate <= :end");
+		query.setParameter("begin", begin);
+		query.setParameter("end", end);
+
+		result = query.list().subList(from, from + size);
+		return result;
+	}
+
+	public List<Book> getPrice(double lte, double gte, int from, int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book where price >= :lte and price <= :gte");
+		query.setParameter("lte", lte);
+		query.setParameter("gte", gte);
+
+		result = query.list().subList(from, from + size);
+		return result;
+	}
+
+	public List<Book> getRandom(int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book order by rand()")
+				.setMaxResults(size);
+		
+		result = query.list();
+		return result;
+	}
+
+	public List<Book> getNew(int from, int size) {
+		List<Book> result = null;
+
+		Query query = iBookHibernateUtil.getSessionFactory().openSession()
+				.createQuery("from Book order by publicDate DES")
+				.setMaxResults(size);
+		
+		result = query.list();
+		return result;
+	}
+
+	public List<Book> getRecommend(int idBook, int from, int size) {
+		return null;
+	}
+
+}

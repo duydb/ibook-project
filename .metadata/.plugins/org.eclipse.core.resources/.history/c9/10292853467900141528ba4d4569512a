@@ -1,0 +1,13 @@
+package com.webdev.server.helpers;
+
+public class HSessionHelper {
+	private static HSessionHelper instance = null;
+	private HSessionHelper() {
+	}
+	
+	public static HSessionHelper getInstance(){
+		if (instance == null){
+			instance = new HSessionHelper();
+		}
+	}
+}

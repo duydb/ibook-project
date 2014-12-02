@@ -1,0 +1,3 @@
+INDEX VERSION 1.127
+D:\github\ibook-project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2964971041.index
+\ibookserver\src\main\resources

@@ -1,0 +1,7 @@
+package com.webdev.server.helpers;
+
+public class HSessionHelper {
+	private static HSessionHelper instance;
+	private HSessionHelper() {
+	}
+}

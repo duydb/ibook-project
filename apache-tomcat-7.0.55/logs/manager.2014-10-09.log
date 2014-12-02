@@ -1,0 +1,66 @@
+Oct 09, 2014 7:38:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Oct 09, 2014 7:38:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Oct 09, 2014 7:38:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:38:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:38:35 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/duydb/AppData/Local/Temp/context5154253476909407795.xml'
+Oct 09, 2014 7:38:36 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application '/BookOnline'
+Oct 09, 2014 7:39:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:39:38 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:39:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:39:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:40:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Oct 09, 2014 7:40:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Oct 09, 2014 7:40:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:40:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:40:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:41:45 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:41:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Oct 09, 2014 7:41:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Oct 09, 2014 7:41:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:41:57 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:42:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:42:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:43:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Oct 09, 2014 7:43:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Oct 09, 2014 7:43:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:43:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:43:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:46:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:46:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 7:46:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 7:46:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application '/BookOnline'
+Oct 09, 2014 8:32:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Oct 09, 2014 8:33:03 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'

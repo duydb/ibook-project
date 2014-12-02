@@ -1,0 +1,5 @@
+package com.webdev.server.dao;
+
+public interface BookDAO {
+	public Book get(int id) 
+}

@@ -1,0 +1,9 @@
+package test_hibernate;
+
+import com.webdev.server.dao.BookImpl;
+
+public class text_bookImpl {
+	public static void main(String[] args){
+		BookImpl b = new BookImpl();
+	}
+}

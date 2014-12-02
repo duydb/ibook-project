@@ -1,0 +1,5 @@
+package test_hibernate;
+
+public class text_bookImpl {
+	public static void main(0)
+}

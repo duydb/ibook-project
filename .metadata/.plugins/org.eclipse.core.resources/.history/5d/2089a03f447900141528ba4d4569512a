@@ -1,0 +1,9 @@
+package com.webdev.server.dao;
+
+import com.webdev.server.POJO.Book;
+
+public interface BookDAO {
+	public Book get(int id);
+	public Book get(string code);
+	public List<Book> getByCategory()
+}

@@ -1,0 +1,9 @@
+package test_hibernate;
+
+import com.webdev.server.util.iBookHibernateUtil;
+
+public class simple {
+	public static void main(String[] args){
+		iBookHibernateUtil util = new iBookHibernateUtil(); 
+	}
+}

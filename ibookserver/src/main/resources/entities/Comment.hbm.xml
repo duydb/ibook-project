@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2014 3:59:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.webdev.server.POJO.Comment" table="comment" catalog="admin_book" optimistic-lock="version">
+        <id name="commentId" type="java.lang.Integer">
+            <column name="comment_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="book" class="com.webdev.server.POJO.Book" fetch="select">
+            <column name="book_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="com.webdev.server.POJO.User" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <property name="value" type="string">
+            <column name="value" length="1000" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="dateComment" type="timestamp">
+            <column name="date_comment" length="0" not-null="true" />
+        </property>
+        <property name="dateModify" type="timestamp">
+            <column name="date_modify" length="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

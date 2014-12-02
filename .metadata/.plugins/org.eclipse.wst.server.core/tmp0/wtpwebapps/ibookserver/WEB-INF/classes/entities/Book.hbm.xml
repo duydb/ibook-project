@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2014 3:59:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.webdev.server.POJO.Book" table="book" catalog="admin_book" optimistic-lock="version">
+        <id name="bookId" type="java.lang.Integer">
+            <column name="book_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="coverFormat" class="com.webdev.server.POJO.CoverFormat" fetch="select">
+            <column name="cover_format" not-null="true" />
+        </many-to-one>
+        <property name="bookCode" type="string">
+            <column name="book_code" length="50" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="1000" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" not-null="true" />
+        </property>
+        <property name="pagesNum" type="int">
+            <column name="pages_num" not-null="true" />
+        </property>
+        <property name="publicDate" type="timestamp">
+            <column name="public_date" length="0" not-null="true" />
+        </property>
+        <property name="weight" type="float">
+            <column name="weight" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="imageCover" type="string">
+            <column name="image_cover" length="1000" />
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="price" precision="12" scale="0" />
+        </property>
+        <property name="priceSale" type="java.lang.Float">
+            <column name="price_sale" precision="12" scale="0" />
+        </property>
+        <property name="dateModify" type="timestamp">
+            <column name="date_modify" length="0" not-null="true" />
+        </property>
+        <set name="rates" table="rate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="book_id" not-null="true" />
+            </key>
+            <one-to-many class="com.webdev.server.POJO.Rate" />
+        </set>
+        <set name="comments" table="comment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="book_id" not-null="true" />
+            </key>
+            <one-to-many class="com.webdev.server.POJO.Comment" />
+        </set>
+        <set name="orderDetails" table="order_detail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="book_id" not-null="true" />
+            </key>
+            <one-to-many class="com.webdev.server.POJO.OrderDetail" />
+        </set>
+    </class>
+</hibernate-mapping>
