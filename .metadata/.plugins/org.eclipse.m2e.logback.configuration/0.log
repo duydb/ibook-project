@@ -1920,3 +1920,7 @@ java.io.FileNotFoundException: D:\github\ibook-project\.metadata\.plugins\org.ec
 2014-12-01 22:16:55,722 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2014-12-01 22:16:55,723 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2014-12-01 22:16:55,724 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\github\ibook-project\ibookserver\src\test\resources
+2014-12-02 10:04:46,839 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-12-02 10:04:46,867 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2014-12-02 10:04:46,877 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-12-02 10:04:46,878 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\github\ibook-project\ibookserver\src\test\resources
